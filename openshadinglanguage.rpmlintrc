@@ -1,0 +1,2 @@
+# false positive, this file belongs with the library package
+addFilter("E: outside-libdir-files /usr/share/licenses/lib64openshadinglanguage/THIRD-PARTY.md")
