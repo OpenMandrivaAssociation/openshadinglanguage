@@ -1,7 +1,6 @@
-diff -up OpenShadingLanguage-1.15.5.0/src/cmake/externalpackages.cmake.omv~ OpenShadingLanguage-1.15.5.0/src/cmake/externalpackages.cmake
---- OpenShadingLanguage-1.15.5.0/src/cmake/externalpackages.cmake.omv~	2026-06-01 19:33:29.000000000 +0200
-+++ OpenShadingLanguage-1.15.5.0/src/cmake/externalpackages.cmake	2026-07-26 15:21:33.000000000 +0200
-@@ -58,7 +58,7 @@
+--- OpenShadingLanguage-1.15.5.0.orig/src/cmake/externalpackages.cmake	2026-06-01 19:33:29.000000000 +0200
++++ OpenShadingLanguage-1.15.5.0/src/cmake/externalpackages.cmake	2026-07-26 17:39:21.411482217 +0200
+@@ -58,7 +58,7 @@ checked_find_package (pugixml REQUIRED
  # LLVM library setup
  checked_find_package (LLVM REQUIRED
                        VERSION_MIN 14.0
@@ -10,10 +9,10 @@ diff -up OpenShadingLanguage-1.15.5.0/src/cmake/externalpackages.cmake.omv~ Open
                        PRINT LLVM_SYSTEM_LIBRARIES CLANG_LIBRARIES
                              LLVM_SHARED_MODE)
  # ensure include directory is added (in case of non-standard locations
-diff -up OpenShadingLanguage-1.15.5.0/src/liboslexec/llvm_util.cpp.omv~ OpenShadingLanguage-1.15.5.0/src/liboslexec/llvm_util.cpp
---- OpenShadingLanguage-1.15.5.0/src/liboslexec/llvm_util.cpp.omv~	2026-06-01 00:00:00.000000000 +0000
-+++ OpenShadingLanguage-1.15.5.0/src/liboslexec/llvm_util.cpp	2026-07-26 00:00:00.000000000 +0000
-@@ -78,7 +78,10 @@
+--- OpenShadingLanguage-1.15.5.0.orig/src/liboslexec/llvm_util.cpp	2026-06-01 19:33:29.000000000 +0200
++++ OpenShadingLanguage-1.15.5.0/src/liboslexec/llvm_util.cpp	2026-07-26 17:39:21.447349719 +0200
+@@ -78,7 +78,10 @@ OSL_GCC_PRAGMA(GCC diagnostic ignored "-
+ #include <llvm/Transforms/Scalar.h>
  #include <llvm/Transforms/Scalar/GVN.h>
  #include <llvm/Transforms/Utils.h>
 +#if OSL_LLVM_VERSION < 230
@@ -22,3 +21,4 @@ diff -up OpenShadingLanguage-1.15.5.0/src/liboslexec/llvm_util.cpp.omv~ OpenShad
 +#endif
  
  #include <llvm/Support/DynamicLibrary.h>
+ 

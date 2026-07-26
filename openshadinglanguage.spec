@@ -7,7 +7,7 @@
 
 Name:		openshadinglanguage
 Version:	1.15.5.0
-Release:	2
+Release:	3
 Summary:	Advanced shading language for production GI renderers
 License:	BSD-3-Clause
 Group:		System/Libraries
