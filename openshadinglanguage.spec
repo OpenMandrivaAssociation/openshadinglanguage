@@ -16,6 +16,7 @@ Source0:	https://github.com/AcademySoftwareFoundation/OpenShadingLanguage/archiv
 Source100:	%{name}.rpmlintrc
 # repo - https://github.com/AcademySoftwareFoundation/OpenShadingLanguage
 Patch0:	OpenShadingLanguage-1.15.4.0-fix-install-paths.patch
+Patch1:	openshadinglanguage-1.15.5.0-llvm-23.patch
 
 BuildSystem:	cmake
 BuildOption(prep):	-p1

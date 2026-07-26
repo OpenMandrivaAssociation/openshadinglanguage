@@ -1,0 +1,12 @@
+diff -up OpenShadingLanguage-1.15.5.0/src/cmake/externalpackages.cmake.omv~ OpenShadingLanguage-1.15.5.0/src/cmake/externalpackages.cmake
+--- OpenShadingLanguage-1.15.5.0/src/cmake/externalpackages.cmake.omv~	2026-06-01 19:33:29.000000000 +0200
++++ OpenShadingLanguage-1.15.5.0/src/cmake/externalpackages.cmake	2026-07-26 15:21:33.000000000 +0200
+@@ -58,7 +58,7 @@
+ # LLVM library setup
+ checked_find_package (LLVM REQUIRED
+                       VERSION_MIN 14.0
+-                      VERSION_MAX 22.9
++                      VERSION_MAX 23.9
+                       PRINT LLVM_SYSTEM_LIBRARIES CLANG_LIBRARIES
+                             LLVM_SHARED_MODE)
+ # ensure include directory is added (in case of non-standard locations
