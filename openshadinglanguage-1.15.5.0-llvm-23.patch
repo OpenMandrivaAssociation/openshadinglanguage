@@ -10,3 +10,15 @@ diff -up OpenShadingLanguage-1.15.5.0/src/cmake/externalpackages.cmake.omv~ Open
                        PRINT LLVM_SYSTEM_LIBRARIES CLANG_LIBRARIES
                              LLVM_SHARED_MODE)
  # ensure include directory is added (in case of non-standard locations
+diff -up OpenShadingLanguage-1.15.5.0/src/liboslexec/llvm_util.cpp.omv~ OpenShadingLanguage-1.15.5.0/src/liboslexec/llvm_util.cpp
+--- OpenShadingLanguage-1.15.5.0/src/liboslexec/llvm_util.cpp.omv~	2026-06-01 00:00:00.000000000 +0000
++++ OpenShadingLanguage-1.15.5.0/src/liboslexec/llvm_util.cpp	2026-07-26 00:00:00.000000000 +0000
+@@ -78,7 +78,10 @@
+ #include <llvm/Transforms/Scalar/GVN.h>
+ #include <llvm/Transforms/Utils.h>
++#if OSL_LLVM_VERSION < 230
++// Removed in LLVM 23
+ #include <llvm/Transforms/Utils/UnifyFunctionExitNodes.h>
++#endif
+ 
+ #include <llvm/Support/DynamicLibrary.h>
