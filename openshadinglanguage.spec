@@ -6,8 +6,8 @@
 %bcond python 1
 
 Name:		openshadinglanguage
-Version:	1.15.5.0
-Release:	5
+Version:	1.15.6.0
+Release:	1
 Summary:	Advanced shading language for production GI renderers
 License:	BSD-3-Clause
 Group:		System/Libraries
