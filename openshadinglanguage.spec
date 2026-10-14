@@ -6,7 +6,7 @@
 %bcond python 1
 
 Name:		openshadinglanguage
-Version:	1.15.6.0
+Version:	1.15.7.0
 Release:	1
 Summary:	Advanced shading language for production GI renderers
 License:	BSD-3-Clause
@@ -16,7 +16,7 @@ Source0:	https://github.com/AcademySoftwareFoundation/OpenShadingLanguage/archiv
 Source100:	%{name}.rpmlintrc
 # repo - https://github.com/AcademySoftwareFoundation/OpenShadingLanguage
 Patch0:	OpenShadingLanguage-1.15.4.0-fix-install-paths.patch
-Patch1:	openshadinglanguage-1.15.5.0-llvm-23.patch
+# 1.15.7.0 accepts LLVM through 23.9 upstream. The 1.15.5 LLVM 23 patch no longer applies.
 
 BuildSystem:	cmake
 BuildOption(prep):	-p1
@@ -55,7 +55,7 @@ BuildRequires:	cmake(Qt6Widgets)
 %endif
 %if %{with python}
 BuildRequires:	cmake(pybind11)
-BuildRequires:	pkgconfig(python)
+BuildRequires:	pkgconfig(python3)
 BuildRequires:	python%{pyver}dist(numpy)
 %endif
 
